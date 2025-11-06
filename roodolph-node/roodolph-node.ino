@@ -22,13 +22,24 @@
 #include <ArduinoJson.h>
 
 // ---------- USER CONFIG ----------
-const char* WIFI_SSID = "";
-const char* WIFI_PASS = "";
-
-const char* MQTT_SERVER = "";
-const uint16_t MQTT_PORT = 1883;
-const char* MQTT_USER = ""; // optional
-const char* MQTT_PASSWD = ""; // optional
+#ifndef WIFI_SSID
+#define WIFI_SSID ""
+#endif
+#ifndef WIFI_PASS
+#define WIFI_PASS ""
+#endif
+#ifndef MQTT_SERVER
+#define MQTT_SERVER ""
+#endif
+#ifndef MQTT_PORT
+#define MQTT_PORT 1883
+#endif
+#ifndef MQTT_USER
+#define MQTT_USER ""
+#endif
+#ifndef MQTT_PASSWD
+#define MQTT_PASSWD ""
+#endif
 
 const char* MQTT_BASE_TOPIC = "sensornode/esp32_01"; // base topic for this node
 // publishes telemetry to: sensornode/esp32_01/telemetry
